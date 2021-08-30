@@ -37,8 +37,8 @@ public class App extends JFrame {
             }
         }
         //Pawn Spawning
-        BufferedImage img_black = ImageIO.read(new File("src/main/resources/assets/black/png/Chess_pdt60.png"));
-        BufferedImage img_white = ImageIO.read(new File("src/main/resources/assets/white/png/Chess_plt60.png"));
+        Image img_black = ImageIO.read(new File("src/main/resources/assets/black/png/Chess_pdt60.png")).getScaledInstance(100, 100, 1);
+        Image img_white = ImageIO.read(new File("src/main/resources/assets/white/png/Chess_plt60.png")).getScaledInstance(100, 100, 1);
         for(int h = 0; h < 8; h++) {
             grid[1][h].add(new JLabel(new ImageIcon(img_black)));
             grid[6][h].add(new JLabel(new ImageIcon(img_white)));
