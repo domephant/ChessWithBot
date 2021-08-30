@@ -46,39 +46,39 @@ public class App extends JFrame {
 
         //Rook Spawning
         //Black
-        grid[0][0].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_rdt60.png")))));
-        grid[0][7].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_rdt60.png")))));
+        grid[0][0].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_rdt60.png")).getScaledInstance(100, 100, 1))));
+        grid[0][7].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_rdt60.png")).getScaledInstance(100, 100, 1))));
         //White
-        grid[7][0].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_rlt60.png")))));
-        grid[7][7].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_rlt60.png")))));
+        grid[7][0].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_rlt60.png")).getScaledInstance(100, 100, 1))));
+        grid[7][7].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_rlt60.png")).getScaledInstance(100, 100, 1))));
 
         //Knight Spawning
         //Black
-        grid[0][1].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_ndt60.png")))));
-        grid[0][6].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_ndt60.png")))));
+        grid[0][1].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_ndt60.png")).getScaledInstance(100, 100, 1))));
+        grid[0][6].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_ndt60.png")).getScaledInstance(100, 100, 1))));
         //White
-        grid[7][1].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_nlt60.png")))));
-        grid[7][6].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_nlt60.png")))));
+        grid[7][1].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_nlt60.png")).getScaledInstance(100, 100, 1))));
+        grid[7][6].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_nlt60.png")).getScaledInstance(100, 100, 1))));
 
         //Bishop Spawning
         //Black
-        grid[0][2].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_bdt60.png")))));
-        grid[0][5].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_bdt60.png")))));
+        grid[0][2].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_bdt60.png")).getScaledInstance(100, 100, 1))));
+        grid[0][5].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_bdt60.png")).getScaledInstance(100, 100, 1))));
         //White
-        grid[7][2].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_blt60.png")))));
-        grid[7][5].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_blt60.png")))));
+        grid[7][2].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_blt60.png")).getScaledInstance(100, 100, 1))));
+        grid[7][5].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_blt60.png")).getScaledInstance(100, 100, 1))));
 
         //Queen Spawning
         //Black
-        grid[0][3].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_qdt60.png")))));
+        grid[0][3].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_qdt60.png")).getScaledInstance(100, 100, 1))));
         //White
-        grid[7][3].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_qlt60.png")))));
+        grid[7][3].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_qlt60.png")).getScaledInstance(100, 100, 1))));
 
         //King Spawning
         //Black
-        grid[0][4].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_kdt60.png")))));
+        grid[0][4].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_kdt60.png")).getScaledInstance(100, 100, 1))));
         //White
-        grid[7][4].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_klt60.png")))));
+        grid[7][4].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_klt60.png")).getScaledInstance(100, 100, 1))));
 
         this.setVisible(true);
     }
