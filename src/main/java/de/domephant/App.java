@@ -18,19 +18,21 @@ public class App extends JFrame {
         //Basic Layout
         this.setLayout(new GridLayout(8, 8));
         this.setSize(900, 900);
+        this.setResizable(false);
+        JMenuBar menuBar = new JMenuBar();
+        this.setJMenuBar(menuBar);
 
         // Add MenuBarItems
-        JMenuBar menuBar = new JMenuBar();
         JMenu menuFile = new JMenu("File");
         JMenu menuGame = new JMenu("Game");
         JMenuItem enterPosition = new JMenuItem("Enter Position");
+        JMenuItem exitGame = new JMenuItem("Exit Game");
         JMenuItem swapColors = new JMenuItem("Swap Colors");
         menuFile.add(enterPosition);
+        menuFile.add(exitGame);
         menuGame.add(swapColors);
         menuBar.add(menuFile);
         menuBar.add(menuGame);
-
-        this.setJMenuBar(menuBar);
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 grid[i][j] = new Panel();
@@ -98,11 +100,10 @@ public class App extends JFrame {
     }
 
     public static void main( String[] args ) throws IOException {
-        System.out.println("Enter start parameters: ");
-        checkParameters(new Scanner(System.in).nextLine());
         new App();
     }
 
+    /*
     public static void checkParameters(String a) {
         String input = a;
         boolean parametersCorrect = false;
@@ -164,4 +165,5 @@ public class App extends JFrame {
         }
         return true;
     }
+     */
 }
