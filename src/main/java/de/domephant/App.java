@@ -25,6 +25,7 @@ public class App extends JFrame {
         JMenuBar menuBar = new JMenuBar();
         this.setJMenuBar(menuBar);
 
+        //region MenuBar
         // Add MenuBarItems
         JMenu menuFile = new JMenu("File");
         JMenu menuGame = new JMenu("Game");
@@ -53,6 +54,9 @@ public class App extends JFrame {
         menuGame.add(startGame);
         menuBar.add(menuFile);
         menuBar.add(menuGame);
+        //endregion
+
+        //region BoardLayout
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 grid[i][j] = new Panel();
@@ -72,6 +76,10 @@ public class App extends JFrame {
                 this.add(grid[i][j]);
             }
         }
+        //endregion
+
+        //region Piece generation
+
         //Pawn Spawning
         Image img_black = ImageIO.read(new File("src/main/resources/assets/black/png/pawn_black.png")).getScaledInstance(100, 100, 1);
         Image img_white = ImageIO.read(new File("src/main/resources/assets/white/png/pawn_white.png")).getScaledInstance(100, 100, 1);
@@ -115,6 +123,8 @@ public class App extends JFrame {
         grid[0][4].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/king_black.png")).getScaledInstance(100, 100, 1))));
         //White
         grid[7][4].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/king_white.png")).getScaledInstance(100, 100, 1))));
+
+        //endregion
 
         this.setVisible(true);
     }
