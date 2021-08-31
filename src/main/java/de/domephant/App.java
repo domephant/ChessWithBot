@@ -3,6 +3,8 @@ package de.domephant;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -27,11 +29,28 @@ public class App extends JFrame {
         JMenu menuFile = new JMenu("File");
         JMenu menuGame = new JMenu("Game");
         JMenuItem enterPosition = new JMenuItem("Enter Position");
+
         JMenuItem exitGame = new JMenuItem("Exit Game");
+        exitGame.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+
+        JMenuItem startGame = new JMenuItem("Start Game");
+        startGame.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Start game");
+            }
+        });
+
         JMenuItem swapColors = new JMenuItem("Swap Colors");
         menuFile.add(enterPosition);
         menuFile.add(exitGame);
         menuGame.add(swapColors);
+        menuGame.add(startGame);
         menuBar.add(menuFile);
         menuBar.add(menuGame);
         for (int i = 0; i < 8; i++) {
