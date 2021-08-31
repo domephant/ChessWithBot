@@ -15,8 +15,22 @@ public class App extends JFrame {
     private static String player2;
 
     public App() throws IOException {
+        //Basic Layout
         this.setLayout(new GridLayout(8, 8));
         this.setSize(900, 900);
+
+        // Add MenuBarItems
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menuFile = new JMenu("File");
+        JMenu menuGame = new JMenu("Game");
+        JMenuItem enterPosition = new JMenuItem("Enter Position");
+        JMenuItem swapColors = new JMenuItem("Swap Colors");
+        menuFile.add(enterPosition);
+        menuGame.add(swapColors);
+        menuBar.add(menuFile);
+        menuBar.add(menuGame);
+
+        this.setJMenuBar(menuBar);
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 grid[i][j] = new Panel();
