@@ -19,6 +19,7 @@ public class App extends JFrame {
         this.setLayout(new GridLayout(8, 8));
         this.setSize(900, 900);
         this.setResizable(false);
+        this.setTitle("Chess");
         JMenuBar menuBar = new JMenuBar();
         this.setJMenuBar(menuBar);
 
@@ -53,8 +54,8 @@ public class App extends JFrame {
             }
         }
         //Pawn Spawning
-        Image img_black = ImageIO.read(new File("src/main/resources/assets/black/png/Chess_pdt60.png")).getScaledInstance(100, 100, 1);
-        Image img_white = ImageIO.read(new File("src/main/resources/assets/white/png/Chess_plt60.png")).getScaledInstance(100, 100, 1);
+        Image img_black = ImageIO.read(new File("src/main/resources/assets/black/png/pawn_black.png")).getScaledInstance(100, 100, 1);
+        Image img_white = ImageIO.read(new File("src/main/resources/assets/white/png/pawn_white.png")).getScaledInstance(100, 100, 1);
         for(int h = 0; h < 8; h++) {
             grid[1][h].add(new JLabel(new ImageIcon(img_black)));
             grid[6][h].add(new JLabel(new ImageIcon(img_white)));
@@ -62,39 +63,39 @@ public class App extends JFrame {
 
         //Rook Spawning
         //Black
-        grid[0][0].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_rdt60.png")).getScaledInstance(100, 100, 1))));
-        grid[0][7].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_rdt60.png")).getScaledInstance(100, 100, 1))));
+        grid[0][0].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/rook_black.png")).getScaledInstance(100, 100, 1))));
+        grid[0][7].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/rook_black.png")).getScaledInstance(100, 100, 1))));
         //White
-        grid[7][0].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_rlt60.png")).getScaledInstance(100, 100, 1))));
-        grid[7][7].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_rlt60.png")).getScaledInstance(100, 100, 1))));
+        grid[7][0].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/rook_white.png")).getScaledInstance(100, 100, 1))));
+        grid[7][7].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/rook_white.png")).getScaledInstance(100, 100, 1))));
 
         //Knight Spawning
         //Black
-        grid[0][1].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_ndt60.png")).getScaledInstance(100, 100, 1))));
-        grid[0][6].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_ndt60.png")).getScaledInstance(100, 100, 1))));
+        grid[0][1].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/knight_black.png")).getScaledInstance(100, 100, 1))));
+        grid[0][6].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/knight_black.png")).getScaledInstance(100, 100, 1))));
         //White
-        grid[7][1].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_nlt60.png")).getScaledInstance(100, 100, 1))));
-        grid[7][6].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_nlt60.png")).getScaledInstance(100, 100, 1))));
+        grid[7][1].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/knight_white.png")).getScaledInstance(100, 100, 1))));
+        grid[7][6].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/knight_white.png")).getScaledInstance(100, 100, 1))));
 
         //Bishop Spawning
         //Black
-        grid[0][2].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_bdt60.png")).getScaledInstance(100, 100, 1))));
-        grid[0][5].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_bdt60.png")).getScaledInstance(100, 100, 1))));
+        grid[0][2].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/bishop_black.png")).getScaledInstance(100, 100, 1))));
+        grid[0][5].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/bishop_black.png")).getScaledInstance(100, 100, 1))));
         //White
-        grid[7][2].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_blt60.png")).getScaledInstance(100, 100, 1))));
-        grid[7][5].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_blt60.png")).getScaledInstance(100, 100, 1))));
+        grid[7][2].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/bishop_white.png")).getScaledInstance(100, 100, 1))));
+        grid[7][5].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/bishop_white.png")).getScaledInstance(100, 100, 1))));
 
         //Queen Spawning
         //Black
-        grid[0][3].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_qdt60.png")).getScaledInstance(100, 100, 1))));
+        grid[0][3].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/queen_black.png")).getScaledInstance(100, 100, 1))));
         //White
-        grid[7][3].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_qlt60.png")).getScaledInstance(100, 100, 1))));
+        grid[7][3].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/queen_white.png")).getScaledInstance(100, 100, 1))));
 
         //King Spawning
         //Black
-        grid[0][4].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/Chess_kdt60.png")).getScaledInstance(100, 100, 1))));
+        grid[0][4].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/black/png/king_black.png")).getScaledInstance(100, 100, 1))));
         //White
-        grid[7][4].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/Chess_klt60.png")).getScaledInstance(100, 100, 1))));
+        grid[7][4].add(new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/assets/white/png/king_white.png")).getScaledInstance(100, 100, 1))));
 
         this.setVisible(true);
     }
@@ -102,68 +103,4 @@ public class App extends JFrame {
     public static void main( String[] args ) throws IOException {
         new App();
     }
-
-    /*
-    public static void checkParameters(String a) {
-        String input = a;
-        boolean parametersCorrect = false;
-        while(!parametersCorrect) {
-            if(input == null) {
-                System.out.println("Wrong Parameters!");
-                System.out.println("Enter start parameters: ");
-                input = new Scanner(System.in).nextLine();
-            } else {
-                int spaceCounter = 0;
-                for (int i = 0; i < input.length(); i++) {
-                    if (input.charAt(i) == ' ') {
-                        spaceCounter++;
-                    }
-                }
-                if(spaceCounter > 1) {
-                    String[] params = input.split(" ");
-                    switch (params[0]) {
-                        case "start":
-                            if(setPlayer(params[1], "Player1") && setPlayer(params[2], "Player2")) {
-                                parametersCorrect = true;
-                            } else {
-                                System.out.println("Wrong Parameters!");
-                                System.out.println("Enter start parameters: ");
-                                input = new Scanner(System.in).nextLine();
-                                break;
-                            }
-                            break;
-                        case "exit":
-                            System.exit(0);
-                            break;
-                    }
-                } else {
-                    System.out.println("Wrong Parameters!");
-                    System.out.println("Enter start parameters: ");
-                    input = new Scanner(System.in).nextLine();
-                }
-            }
-        }
-    }
-    public static boolean setPlayer(String input, String player) {
-        switch (input) {
-            case "user":
-                if(player.equals("Player1")) {
-                    player1 = "user";
-                } else {
-                    player2 = "user";
-                }
-                break;
-            case "bot":
-                if(player.equals("Player1")) {
-                    player1 = "bot";
-                } else {
-                    player2 = "bot";
-                }
-                break;
-            default:
-                return false;
-        }
-        return true;
-    }
-     */
 }
